@@ -40,4 +40,3 @@
 8. minimum spanning tree
    - 그래프의 사이클이 없이 연결된 트리중 가중치 합이 가장 낮은 것.
    - Kruskal algorigthm: 가중치를 오름차순 정렬 후 해당 엣지를 사이클이 발생하지 않는 선에서 하나씩 연결
-   -
