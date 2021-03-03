@@ -5,5 +5,7 @@
 
 ### 참고하면 좋은 링크
 
-[프론트엔드 면접 질문 - JS #1](https://velog.io/@chris/front-end-interview-handbook-js-1)
-[Interview_Question_for_Beginner](https://github.com/student513/Interview_Question_for_Beginner)
+- [프론트엔드 면접 질문 - JS #1](https://velog.io/@chris/front-end-interview-handbook-js-1)
+- [Interview_Question_for_Beginner](https://github.com/student513/Interview_Question_for_Beginner)
+
+- [마크다운 문서 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
