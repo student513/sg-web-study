@@ -17,9 +17,9 @@
 
 2. forEach와 map의 비교
 
-   - forEach: 배열의 각 요소에 대해 callback을 실행
-   - map: 배열의 각 요소에 대해 callback을 실행 후 실행결과를 모은 새 배열 리턴
-   - forEach 는 배열 요소를 돌면서 callback을 실행할 뿐, 한 callback이 끝날때 까지 기다렸다가 다음 callback을 실행하는 것이 아니다.
+- forEach: 배열의 각 요소에 대해 callback을 실행
+- map: 배열의 각 요소에 대해 callback을 실행 후 실행결과를 모은 새 배열 리턴
+- forEach 는 배열 요소를 돌면서 callback을 실행할 뿐, 한 callback이 끝날때 까지 기다렸다가 다음 callback을 실행하는 것이 아니다.
 
 3. this
 
@@ -36,7 +36,7 @@
 - apply: 매개변수가 담긴 배열 하나 넘겨준다
 - bind: call, apply는 즉시호출. bind는 새로운 함수 생성
 
-16. setInterval과 setTimeOut의 차이?
+5. setInterval과 setTimeOut의 차이?
 
 - setInterval
   - 일정 간격으로 함수 실행
@@ -45,13 +45,13 @@
   - 일정 시간 후 함수 한번 호출
   - 실행중 다른 setTimeout로 인해 함수가 호출되도 기존에 실행된 함수에 영향을 주지 않는다.
 
-4. localStorage vs sessionStorage
+6. localStorage vs sessionStorage
 
 - sessionStorage: 브라우저에서 같은 웹사이트를 여러 탭이나 창에 띄우면, 여러 개의 세션 스토리지에 데이터가 서로 격리되어 저장되며, 각 탭이나 창이 닫힐 때 저장해 둔 데이터도 함께 소멸합니다.
 - localStorage: 로컬 스토리지의 경우 여러 탭이나 창 간에 데이터가 서로 공유되며 탭이나 창을 닫아도 데이터는 브라우저에 그대로 남아 있습니다.
 - [출처](https://www.daleseo.com/js-web-storage/)
 
-5. web cache
+7. web cache
 
 - 사용자(client)가 웹 사이트(server)에 접속할 때, 정적 컨텐츠(이미지, JS, CSS 등)를 특정 위치(client, network 등)에 저장하여, 웹 사이트 서버에 해당 컨텐츠를 매번 요청하여 받는것이 아니라, 특정 위치에서 불러옴으로써 사이트 응답시간을 줄이고, 서버 트래픽 감소 효과를 볼 수 있다.
 
@@ -88,78 +88,3 @@
     - 최초응답 시 받은 값을 헤더에 포함시켜 페이지 요청
     - 요청 파일의 수정시간을 헤더와 비교하여 동일하면 304 not modified로 응답하고 다르면 200 OK와 함께 새로운 값을응답헤더에 전송
 - [출처](https://hahahoho5915.tistory.com/33)
-
-## babel
-
-1. 바벨이란? 레거시 브라우저에 서비스가 구동되도록한 경험이 있나?
-
-- 자바스크립트 트랜스파일러이다.
-- 나날이 변화하는 esnext 문법을 기존의 브라우저가 이해할 수 있도록 예전 문법으로 변환시켜준다
-- typescript 또한 javascript로의 변환이 필요하다.
-- polyfill
-  - 폴리필(polyfill) 은 개발자가 특정 기능이 지원되지 않는 브라우저를 위해 사용할 수 있는 코드 조각이나플러그인을 의미 합니다.
-  - 브라우저에서 지원하지 않는 기능들에 대한 호환성 작업을 채워 넣는다고 해서 polyfill 이라고 칭합니다.
-  - babel 은 이러한 polyfill 을 손쉽게 지원하기 위해 babel-polyfill 기능을 지원합니다.
-  - 즉, babel 은 컴파일시에 실행되고 babel-polyfill 은 런타임에 실행되는 것입니다.
-
-## webpack
-
-1. 웹팩이란?
-
-- 웹팩은 기본적으로 모듈 번들러다.
-- 의존성 그래프에서 엔트리로 그래프의 시작점을 설정하면 웹팩은 모든 자원을 모듈로 로딩한 후 아웃풋으로 묶어준다. 로더로 각 모듈별로 바벨, 사스변환 등의 처리하고 이 결과를 플러그인이 받아 난독화, 텍스트 추출 등의 추가 작업을 한다.
-
-## node.js
-
-1. node.js란?
-
-- 웹 서버는 node.js로 구축할 수 있는 기능 중 하나일 뿐, node.js가 웹 서버 그 자체는 아니다.
-- javascript 런타임(프로그래밍 언어가 구동되는 환경)이다.
-- 특징: 이벤트 기반으로 개발이 가능하며 Non-Blocking I/O를 지원하기 때문에 비동기식 프로그래밍이 가능
-  - 비동기 I/O 처리: Node.js 라이브러리의 모든 API는 비동기식(async)입니다, 멈추지 않는다는거죠 (Non-blocking). Node.js 기반 서버는 API가 실행되었을때, 데이터를 반환할때까지 기다리지 않고 다음 API 를 실행합니다. 그리고 이전에 실행했던 API가 결과값을 반환할 시, Node.js의 이벤트 알림 메커니즘을 통해 결과값을 받아옵니다.
-  - 빠른 속도: 구글 크롬(Google Chrome)의 V8 자바스크립트 엔진(JavaScript Engine)을 사용하여 빠른 코드 실행을 제공합니다.
-  - 단일 쓰레드와 뛰어난 확장성: Node.js는 이벤트 루프와 함께 단일 쓰레드 모델을 사용합니다. 이벤트 메커니즘은 서버가 멈추지않고 반응하도록 해주어 서버의 확장성을 키워줍니다. 반면, 아파치(Apache)같은 일반적인 웹서버는 요청을 처리하기 위하여 제한된 쓰레드를 생성합니다. Node.js 는 쓰레드를 한개만 사용하고 아파치(Apache)같은 웹서버보다 훨씬 많은 요청을 처리할 수 있습니다.
-
-2. 자바스크립트 엔진 vs 자바스크립트 런타임
-
-- 자바스크립트 엔진은 자바스크립트 코드를 실행하는 프로그램 혹은 인터프리터를 말합니다
-- 자바스크립트 런타임환경은 프로그램에 실행동안 사용 가능한 내장된 라이브러리를 제공합니다. window 객체나 DOM api를 사용하는 것이 포함됨
-
-3. node.js 디버깅
-
-- [출처](https://www.a-mean-blog.com/ko/blog/%EB%8B%A8%ED%8E%B8%EA%B0%95%EC%A2%8C/_/node-js-%EB%94%94%EB%B2%84%EA%B9%85-%EB%B0%A9%EB%B2%95)
-
-## React
-
-1. react 컴포넌트를 나누는 기준
-
-- 리액트의 가장 큰 특징은 컴포넌트 단위의 상태관리는 Virtual DOM을 이용해 뷰의 변화를 부분적이고 효율적으로 적용한다.
-- 변화하는 뷰와 그를 제어하는 상태를 하나의 단위로 묶어서 컴포넌트로 관리해야함
-
-2. 전역 상태 관리
-
-- redux, mobx 이용
-- contest api : 여러 개의 props를 용이하게 다른 컴포넌트에 보내는 방법
-
-3. hoc이 뭘까?
-
-- [Higher Order Component](https://velopert.com/3537)
-
-## git
-
-1. 브랜칭전략
-
-- git flow
-  - master: 제품 배포 브랜치입니다
-  - develop : 개발 브랜치로 개발자들이 이 브랜치를 기준으로 각자 작업한 기능들을 합(Merge)칩니다.
-  - feature : 단위 기능을 개발하는 브랜치로 기능 개발이 완료되면 develop 브랜치에 합칩니다.
-  - release : 배포를 위해 master 브랜치로 보내기 전에 먼저 QA(품질검사)를 하기위한 브랜치 입니다.
-  - hotfix : master 브랜치로 배포를 했는데 버그가 생겼을 떄 긴급 수정하는 브랜치 입니다.
-- develop - feature 브렌치간 머지 : Squash and Merge가 유용합니다. 일반적으로 머지 후에 feature 브렌치를 삭제해버리는 점을 떠올려 보면, feature 브렌치의 커밋 히스토리를 모두 develop 브렌치에 직접 연관 지어 남길 필요가 없습니다.
-- master - develop 브렌치간 머지 : Rebase and Merge가 유용합니다. develop의 내용을 master에 추가할 때에는 별도의 새로운 커밋을 생성할 이유가 없기 때문입니다.
-- hotfix - develop, hotfix - master 브렌치간 머지 : Merge 또는 Squash and Merge 모두 유용합니다.
-
-2. rebase와 merge 비교: 커밋 메시지 기준
-
-- Merge는 branch를 통합하는 것이고, Rebase는 branch의 base를 옮긴다는 개념의 차이가 있습니다.
-- rebase를 하고 merge할 경우 커밋 히스토리가 깔끔해진다.
