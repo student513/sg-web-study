@@ -30,11 +30,11 @@
   - callback: 기본적으로 함수와 동일. callback의 제어권을 넘겨받은 함수가 call, apply, bind 등으로 this 주체를 설정 가능
   - 생성자함수: 인스턴스
 
-  - arrow function의 등장배경: 객체 내 함수의 this가 전역객체를 가리키지않고 메소드처럼 호출 주체를 부르도록 하기 위해서
-  - call, apply, bind등으로 this의 주체를 직접 설정 가능
-  - call: 매개변수 무한으로 넘겨줄 수 있다.
-  - apply: 매개변수가 담긴 배열 하나 넘겨준다
-  - bind: call, apply는 즉시호출. bind는 새로운 함수 생성
+- arrow function의 등장배경: 객체 내 함수의 this가 전역객체를 가리키지않고 메소드처럼 호출 주체를 부르도록 하기 위해서
+- call, apply, bind등으로 this의 주체를 직접 설정 가능
+- call: 매개변수 무한으로 넘겨줄 수 있다.
+- apply: 매개변수가 담긴 배열 하나 넘겨준다
+- bind: call, apply는 즉시호출. bind는 새로운 함수 생성
 
 16. setInterval과 setTimeOut의 차이?
 
